@@ -16,6 +16,10 @@
 		007DA0D325493FBE006E4CDD /* SimpleSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DA0D225493FBE006E4CDD /* SimpleSwiftAppTests.swift */; };
 		007DA0DE25493FBE006E4CDD /* SimpleSwiftAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DA0DD25493FBE006E4CDD /* SimpleSwiftAppUITests.swift */; };
 		00C57772254AC117002E88E3 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C57771254AC116002E88E3 /* CalculatorBrain.swift */; };
+		00D18C27254EAE89005B7C3C /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D18C26254EAE89005B7C3C /* EmotionViewController.swift */; };
+		00FAAB3D254D588B0040764E /* Faceit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FAAB3C254D588B0040764E /* Faceit.swift */; };
+		00FAAB3F254E73AB0040764E /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FAAB3E254E73AB0040764E /* FacialExpression.swift */; };
+		00FAAB41254E74A10040764E /* FacialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FAAB40254E74A10040764E /* FacialController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		007DA0DD25493FBE006E4CDD /* SimpleSwiftAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftAppUITests.swift; sourceTree = "<group>"; };
 		007DA0DF25493FBE006E4CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C57771254AC116002E88E3 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		00D18C26254EAE89005B7C3C /* EmotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
+		00FAAB3C254D588B0040764E /* Faceit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faceit.swift; sourceTree = "<group>"; };
+		00FAAB3E254E73AB0040764E /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		00FAAB40254E74A10040764E /* FacialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,8 @@
 		007DA0AF25493FBC006E4CDD = {
 			isa = PBXGroup;
 			children = (
+				007DA0C125493FBC006E4CDD /* Main.storyboard */,
+				00FAAB42254E74A70040764E /* FacialExpression */,
 				007DA0BA25493FBC006E4CDD /* SimpleSwiftApp */,
 				007DA0D125493FBE006E4CDD /* SimpleSwiftAppTests */,
 				007DA0DC25493FBE006E4CDD /* SimpleSwiftAppUITests */,
@@ -133,10 +143,20 @@
 			isa = PBXGroup;
 			children = (
 				007DA0BF25493FBC006E4CDD /* ViewController.swift */,
-				007DA0C125493FBC006E4CDD /* Main.storyboard */,
 				00C57771254AC116002E88E3 /* CalculatorBrain.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		00FAAB42254E74A70040764E /* FacialExpression */ = {
+			isa = PBXGroup;
+			children = (
+				00FAAB3E254E73AB0040764E /* FacialExpression.swift */,
+				00FAAB40254E74A10040764E /* FacialController.swift */,
+				00FAAB3C254D588B0040764E /* Faceit.swift */,
+				00D18C26254EAE89005B7C3C /* EmotionViewController.swift */,
+			);
+			path = FacialExpression;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +290,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D18C27254EAE89005B7C3C /* EmotionViewController.swift in Sources */,
+				00FAAB41254E74A10040764E /* FacialController.swift in Sources */,
+				00FAAB3D254D588B0040764E /* Faceit.swift in Sources */,
 				007DA0C025493FBC006E4CDD /* ViewController.swift in Sources */,
 				007DA0BC25493FBC006E4CDD /* AppDelegate.swift in Sources */,
 				00C57772254AC117002E88E3 /* CalculatorBrain.swift in Sources */,
 				007DA0BE25493FBC006E4CDD /* SceneDelegate.swift in Sources */,
+				00FAAB3F254E73AB0040764E /* FacialExpression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
