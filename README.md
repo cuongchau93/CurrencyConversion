@@ -5,10 +5,12 @@ Simple Application in Swift
 
 1. Calculator
 2. Emotions picker
+3. Currency Conversion
 
 # Demo
 ![](demo.gif)
 
-# Features in plan
+![](currency.gif)
 
-1. Currency Conversion
+# Features in plan
+1. Not using Storyboard

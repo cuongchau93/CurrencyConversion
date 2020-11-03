@@ -368,9 +368,12 @@
                                         <rect key="frame" x="0.0" y="80" width="200" height="30"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Log in with Facebook">
+                                        <state key="normal" title="Currency Conversion">
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="T4T-iW-B45" kind="show" id="Shu-Ep-Egq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -460,11 +463,11 @@
             <objects>
                 <viewController id="K7i-um-icb" customClass="FacialViewController" customModule="SimpleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wya-4B-b1H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-yB-Obn" customClass="Faceit" customModule="SimpleSwiftApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="88" width="343" height="690"/>
+                                <rect key="frame" x="16" y="0.0" width="343" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="scale">
@@ -519,9 +522,128 @@
             </objects>
             <point key="canvasLocation" x="612" y="-270"/>
         </scene>
+        <!--Currency ConversionVC-->
+        <scene sceneID="VVh-XS-4DH">
+            <objects>
+                <viewController id="T4T-iW-B45" customClass="CurrencyConversionVC" customModule="SimpleSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MqI-pO-MWs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="173" translatesAutoresizingMaskIntoConstraints="NO" id="dzM-TQ-Nes">
+                                <rect key="frame" x="16" y="104" width="343" height="292"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QOr-sD-Eoh">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="98"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-Ld-d6M">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx0-5F-vdL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="BoQ-Xd-IAs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <state key="normal" title="EUR 🔽">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onCurrencyButtonClicked:" destination="T4T-iW-B45" eventType="touchUpInside" id="AjU-Hm-uhg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.0" borderStyle="line" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vp9-7R-u2V">
+                                                        <rect key="frame" x="69" y="0.0" width="274" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="inputChanged:" destination="T4T-iW-B45" eventType="editingChanged" id="G2N-tt-o7Q"/>
+                                                            <action selector="inputFocused:" destination="T4T-iW-B45" eventType="touchDown" id="61D-cU-Nao"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-TD-KQr">
+                                                <rect key="frame" x="0.0" y="64" width="343" height="34"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Br5-r5-ZfI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="56" id="FmA-om-77g"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <state key="normal" title="? 🔽">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onCurrencyButtonClicked:" destination="T4T-iW-B45" eventType="touchUpInside" id="1OA-Fd-0XK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-4e-AaK">
+                                                        <rect key="frame" x="69" y="0.0" width="274" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="inputChanged:" destination="T4T-iW-B45" eventType="editingChanged" id="0Dj-PV-10z"/>
+                                                            <action selector="inputChanged:" destination="T4T-iW-B45" eventType="valueChanged" id="P7r-Tj-Xoi"/>
+                                                            <action selector="inputFocused:" destination="T4T-iW-B45" eventType="touchDown" id="GnP-UC-uV5"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="z7H-TD-KQr" firstAttribute="top" secondItem="QOr-sD-Eoh" secondAttribute="top" constant="64" id="tdN-Zn-bl2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Phi-OO-Agf">
+                                        <rect key="frame" x="0.0" y="271" width="343" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="EWI-gI-JYl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmP-PZ-KB8">
+                                <rect key="frame" x="16" y="509" width="343" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="269" id="NDc-xM-VBh"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JmP-PZ-KB8" firstAttribute="trailing" secondItem="dzM-TQ-Nes" secondAttribute="trailing" id="68i-ND-ncx"/>
+                            <constraint firstItem="JmP-PZ-KB8" firstAttribute="leading" secondItem="dzM-TQ-Nes" secondAttribute="leading" id="KhP-QM-Tgb"/>
+                            <constraint firstItem="JmP-PZ-KB8" firstAttribute="bottom" secondItem="Zk5-GE-H83" secondAttribute="bottom" id="YCG-tu-VB8"/>
+                            <constraint firstItem="dzM-TQ-Nes" firstAttribute="leading" secondItem="Zk5-GE-H83" secondAttribute="leading" constant="16" id="g7X-X6-pgW"/>
+                            <constraint firstItem="Zk5-GE-H83" firstAttribute="trailing" secondItem="dzM-TQ-Nes" secondAttribute="trailing" constant="16" id="hd0-6b-xPi"/>
+                            <constraint firstItem="dzM-TQ-Nes" firstAttribute="top" secondItem="Zk5-GE-H83" secondAttribute="top" constant="16" id="zHF-v9-rcW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zk5-GE-H83"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y5o-4d-fui"/>
+                    <connections>
+                        <outlet property="fromCurrency" destination="gx0-5F-vdL" id="QaX-cO-aME"/>
+                        <outlet property="fromInput" destination="Vp9-7R-u2V" id="IM6-RR-eRW"/>
+                        <outlet property="lastFetchedLabel" destination="Phi-OO-Agf" id="cbg-a2-UDI"/>
+                        <outlet property="picker" destination="JmP-PZ-KB8" id="YP9-kg-awe"/>
+                        <outlet property="toCurrency" destination="Br5-r5-ZfI" id="dNg-hU-GtB"/>
+                        <outlet property="toInput" destination="M9P-4e-AaK" id="fbu-dK-VWD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buw-mC-53I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2511.1999999999998" y="-447.04433497536945"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nt8-4T-KvR"/>
+        <segue reference="Sy0-c3-z3N"/>
         <segue reference="rcU-VN-EBK"/>
     </inferredMetricsTieBreakers>
     <resources>
